@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+                <header>
+            <div class="jumbotron text-center mb-0">
+                <h5>Any sufficiently advanced technology is indistinguishable from magic</h5>
+                <div class="text-center">
+                    <h6><i>Arthur C. Clarke</i></h6>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="{{ path('home') }}">Node Magister</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto ml-3">
+                        {# <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('home') }}">Home</a>
+                        </li> #}
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Cryptocurrencies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Wallet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Support/Ticket</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">FAQ</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto mr-5">
+                        <li class="nav-item d-flex align-items-center">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </body>
+</html>
